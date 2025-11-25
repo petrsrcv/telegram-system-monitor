@@ -1,0 +1,13 @@
+[Unit]
+Description=Telegram System Monitor Bot
+After=network.target
+
+[Service]
+Type=simple
+User=%i
+ExecStart=/usr/bin/python3 /usr/local/bin/telegram_bot_safe.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
